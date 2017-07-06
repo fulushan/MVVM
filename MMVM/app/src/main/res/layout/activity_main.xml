@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data >
+         <variable
+             name="user"
+             type="com.fulushan.bean.UserEntity"/>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:onClick="@{user.onItemClick}"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:text="@{user.username}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:text="@{`use`+user.nickname}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@{String.valueOf(user.age)}"
+            android:layout_width="wrap_content"
+            android:background="@{user.age &lt; 30 ? 0xFF0000FF:0xFFFF0000}"
+            android:layout_height="wrap_content" />
+
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:avator="@{user.avator}"
+            />
+
+
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</layout>
+
