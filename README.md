@@ -1,5 +1,5 @@
-# MMVM
-基于MMVM的Android架构
+# MVVM
+基于 MVVM的Android架构
 
 # 主要功能
   viewModel绑定view 直接显示
